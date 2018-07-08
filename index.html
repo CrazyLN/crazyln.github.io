@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
@@ -10,7 +10,7 @@
   <script type="text/javascript"> 
   var status = false;
   var getUserName= function(){
-    VK.api('users.get',{'user_ids' : '106371183'},function(data){
+    VK.api('users.get',{'user_ids' : 'makintoshrb'},function(data){
       console.log(data.responce);
     });
   };
@@ -21,6 +21,6 @@
     console.log('Error');
   }, '5.80'); 
   </script>
-  <input type="button" value="Перезагрузка" onclick="getUserName();"/>
+  <input type="button" value="Перезагрузка" onclick="getUserName()"/>
 </body>
 </html>
