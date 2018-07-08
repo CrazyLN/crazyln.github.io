@@ -10,8 +10,8 @@
   <script type="text/javascript"> 
   var status = false;
   var getUserName= function(){
-    VK.api('users.get',{},function(data){
-      console.log(data);
+    VK.api('users.get',{'fields' : 'photo_50'},function(data){
+      console.log(data.photo_50);
     });
   };
   VK.init(function() { 
