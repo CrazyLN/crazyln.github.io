@@ -6,21 +6,37 @@
 	<title>HTML5 page</title>
 </head>
 <body>
+  <script src="j2Ds.js"  type="text/javascript"></script>
   <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
   <script type="text/javascript"> 
-  var status = false;
-  var getUserName= function(){
+  'use strict';
+  
+  var err = j2Ds.getErrorManager(),
+      scene = j2Ds.getSceneManager(),
+      gs = j2Ds.getGameStateManager();
+  
+  err.useLogger();
+  
+  scene.init(600,400);
+
+  gs.add('mainMenu' function(){
+    
+  });
+
+  var initGame= function(){
     VK.api('users.get',{'fields' : 'photo_50'},function(data){
-      console.log(data.photo_50);
+      startGame();
     });
   };
-  VK.init(function() { 
-    status = true;
-    console.log('Vk is inited');
+  
+  var startGame = function(){
+    scene.start('mainMenu',60);
+  }
+  VK.init(function() {
+    initGame();
   }, function() { 
     console.log('Error');
   }, '5.80'); 
   </script>
-  <input type="button" value="Перезагрузка" onclick="getUserName();"/>
 </body>
 </html>
