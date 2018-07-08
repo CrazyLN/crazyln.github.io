@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width,user-scalable=no"/>
+	<title>HTML5 page</title>
+</head>
+<body>
+  <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
+  <script type="text/javascript"> 
+  var status = false;
+  var getUserName= function(){
+    VK.api('users.get',{'user_ids' : '336716878'},function(data){
+      console.log(data);
+    });
+  };
+  window.onload= function(){
+    VK.init(function() { 
+    status = true;
+    console.log('Vk is inited');
+  }, function() { 
+    console.log('Error');
+  }, '5.80'); 
+  };
+  </script>
+  <input type="button" value="Перезагрузить страницу" onclick="window.location.reload()" />
+
+</body>
+</html>
