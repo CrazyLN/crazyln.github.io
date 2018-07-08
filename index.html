@@ -10,7 +10,7 @@
   <script type="text/javascript"> 
   var status = false;
   var getUserName= function(){
-    VK.api('users.get',{'user_ids' : '106371183'},function(data){
+    VK.api('users.get',{},function(data){
       console.log(data);
     });
   };
