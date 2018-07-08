@@ -11,7 +11,7 @@
   var status = false;
   var getUserName= function(){
     VK.api('users.get',{'user_ids' : '106371183'},function(data){
-      alert(data);
+      console.log(data);
     });
   };
   VK.init(function() { 
@@ -20,6 +20,7 @@
   }, function() { 
     console.log('Error');
   }, '5.80'); 
+  };
   </script>
   <input type="button" value="Перезагрузка" onclick="getUserName()"/>
 </body>
