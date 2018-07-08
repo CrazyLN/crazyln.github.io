@@ -10,18 +10,18 @@
   <script type="text/javascript"> 
   var status = false;
   var getUserName= function(){
-    VK.api('users.get',{'user_ids' : '106371183'},function(data){
+    VK.api('users.get',{'user_ids' : 'makintoshrb'},function(data){
       console.log(data.responce);
     });
   };
-    VK.init(function() { 
+  VK.init(function() { 
     status = true;
     console.log('Vk is inited');
-    getUserName();
   }, function() { 
     console.log('Error');
   }, '5.80'); 
+  };
   </script>
-  <input type="button" value="Перезагрузка" onclick="getUserName();"/>
+  <input type="button" value="Перезагрузка" onclick="getUserName()"/>
 </body>
 </html>
