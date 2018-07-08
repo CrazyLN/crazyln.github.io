@@ -1,22 +1,9 @@
-# j2Ds - игровой HTML5 движок
-
-[![VK](https://img.shields.io/badge/vk.com-skaner.soft-537599.svg?maxAge=2592000)](http://vk.com/skaner.soft) [![Youtube](https://img.shields.io/badge/youtube-skanersoft-E62117.svg?maxAge=2592000)](https://youtube.com/SkanerSoft?sub_confirmation=1) [![E-Mail](https://img.shields.io/badge/email-skaner0@yandex.ru-ff9900.svg?maxAge=2592000)](mailto://skaner0@yandex.ru)
-
 **j2Ds** - игровой HTML5 2D движок, распространяющийся на условиях [лицензии zlib](https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F_zlib) для HTML5 и Android  / iOS разработки.
+
 Для отрисовки 2D графики используется технология HTML5 canvas.
+Начиная с версии 1.2 есть возможность использовать WebGL (эксперментально)
 
-Автор движка: [Skaner](http://nagel-petr.ru) (Нагель Петр)
-
-Поддержка и разработка: [DeVinterX](https://github.com/devinterx) (Дима)
-
-Сайты: [j2Ds.ru](http://j2Ds.ru), [skanersoft.ru](http://skanersoft.ru)
-
-#### [Документация на русском](https://github.com/SkanerSoft/j2Ds/blob/development/docs/ru_RU/documentation.md)
-#### [API Reference](https://github.com/SkanerSoft/j2Ds/blob/development/docs/api/api.all.md)
-#### [Форум j2Ds](http://skanersoft.ru/forum/3)
-
-
-## Характеристики
+# Характеристики
 * Жанровая направленность: 2D игры любого жанра и типа;
 * Платформа: HTML5 (Web, PC, Android, iOS);
 * Лицензия: абсолютно бесплатно и без ограничений;
@@ -27,12 +14,15 @@
 * Разработчик движка: [SkanerSoft](https://youtube.com/SkanerSoft?sub_confirmation=1)
 
 
-## Особенности:
+
+# Особенности:
 * Поддержка ограничения FPS
+* Собственный отладчик кода с удобным интерфейсом
 * ООП архитектура
 * Работа с примитивами
 * Прозрачности, цветовые эффекты
 * Спрайты, сложные линии, текст
+* Звуки и музыка, зацикливания, громкость, блокировки
 * Анимация изображений, работа со спрайт-картами, скорость анимации, кадр-движок
 * Работа со сценой, как с объектом
 * Работа со слоями, послойная отрисовка, перемещение слоев, невидимости, enabled-слои
@@ -42,6 +32,9 @@
 * Работа с камерами, вращение, перемещение, поддержка viewports
 * Постобработка, motionBlur, alphaBlur, Сепия, инверс цветов и т.д.
 * Полноценный набор базовых возможностей
+* Функции рисования
+* Поддержка мультизадачности
+* Триггеры, система событий
 * Бесплатность и открытость кода (GitHub)
 
 
@@ -51,9 +44,6 @@
 * iOS (не полностью)
 * Социальная сеть ВКонтакте (ВК API идет отдельно)
 
+
 Движок очень прост в изучении, есть [примеры](http://j2ds.ru) приложений.
 Нет каких-либо ограничений на расширяемость, любой класс можно переписать либо создать свой аналог
-
-## Лицензия
-
-Zlib. © 2015-2016 Нагель Петр
