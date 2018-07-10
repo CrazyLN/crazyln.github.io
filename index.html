@@ -3,36 +3,18 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width,user-scalable=no"/>
-	<title>Сдам на 6!</title>
+	<title>HTML5 page</title>
 </head>
 <body>
-  <h1>Сдам на 6 на изи</h1>
-  <script src="src/js/j2Ds.js"  type="text/javascript"></script>
   <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
   <script type="text/javascript"> 
-  'use strict';
   
-  var err = j2Ds.getErrorManager(),
-      scene = j2Ds.getSceneManager(),
-      gs = j2Ds.getGameStateManager();
-  
-  err.useLogger();
-  
-  scene.init(600,400);
-
-  gs.add('mainMenu', function(){
-    
-  });
-
   var initGame= function(){
     VK.api('users.get',{'fields' : 'photo_50'},function(data){
-      startGame();
+    console.log(data);
     });
   };
   
-  var startGame = function(){
-    scene.start('mainMenu',60);
-  }
   VK.init(function() {
     initGame();
   }, function() { 
