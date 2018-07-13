@@ -7,7 +7,6 @@
   <script type="application/javascript">
     function draw() {
       var canvas = document.getElementById('canvas');
-      if (canvas.getContext) {
         var ctx = canvas.getContext('2d');
 
         ctx.beginPath();
@@ -19,7 +18,6 @@
         ctx.moveTo(177,40);
         ctx.arc(171,40,6,0,Math.PI*2);
         ctx.stroke();
-      }
     }
   </script>
 </head>
