@@ -17,10 +17,7 @@
   var hello = function(){
     var i = 0;
     VK.api('users.get',{},function(data){	  
-      while(i > 1){
          alert('Привет,'+ data.response[0].first_name + data.response[0].last_name);
-         i--;
-      }
     });
   }
   
