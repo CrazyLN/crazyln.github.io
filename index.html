@@ -4,8 +4,26 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width,user-scalable=no"/>
 	<title>HTML5 page</title>
+  <script type="application/javascript">
+    function draw() {
+      var canvas = document.getElementById('canvas');
+      if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+
+        ctx.beginPath();
+        ctx.arc(150,70,40,0,Math.PI,false);
+        ctx.moveTo(110,70);
+        ctx.lineTo(190,70);
+        ctx.moveTo(130,40);
+        ctx.arc(125,40,6,0,Math.PI*2);
+        ctx.moveTo(175,40);
+        ctx.arc(170,40,6,0,Math.PI*2);
+        ctx.stroke();
+      }
+    }
+  </script>
 </head>
-<body>
+<body onload='draw();'>
   <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
   <script type="text/javascript"> 
   
@@ -27,6 +45,5 @@
     console.log('Error');
   }, '5.80'); 
   </script>
-  <input type="button" value="Тыкни" onclick="hello()">
 </body>
 </html>
