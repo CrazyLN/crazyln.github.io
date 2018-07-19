@@ -10,8 +10,8 @@ function init(){
     canvas.width = 400;
     canvas.heigth = 480;
     ctx = canvas.getContext('2d');
-    ball.vX = 10;
-    ball.vY = 10;
+    ball.vX = 3;
+    ball.vY = 3;
     setInterval(play , 1000 / 50);
     game.onmousemove = function(e){playerMove(e)};
 }
