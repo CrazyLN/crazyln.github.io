@@ -10,9 +10,10 @@ function init(){
     canvas.width = 400;
     canvas.heigth = 480;
     ctx = canvas.getContext('2d');
-    ball.vX = 2;
-    ball.vY = 2;
+    ball.vX = 3;
+    ball.vY = 3;
     setInterval(play , 1000 / 50);
+    game.onmousemove = function(e){playerMove(e)};
 }
 function play(){
     draw();
@@ -70,6 +71,10 @@ function update(){
     ball.y += ball.vY;
     aiMove();
 }
+function playerMove(e){
+    var x = e.clientX;
+    player.x = x - player.width / 2;
+}
 function playerMoveLeft(){
     if(player.x > 20){
     player.x -= 20;
@@ -82,7 +87,7 @@ function playerMoveRigth(){
 }
 function aiMove(){
     var x ;
-    var vX = Math.abs(ball.vX) - 2 ;
+    var vX = Math.abs(ball.vX) - 0.8 ;
     if(ball.x < ai.x + ai.width / 2){
         x = ai.x - vX;
     } else {
