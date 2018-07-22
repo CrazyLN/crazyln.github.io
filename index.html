@@ -1,0 +1,32 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title> 
+    <script src="dist/phaser.min.js"></script>
+</head>
+<body>
+    <script>
+        var config = {
+            type : Phaser.AUTO , 
+            width : 640 ,
+            height : 1136 ,
+            scene : {
+                preload : preload ,
+                create : create ,
+                update : update 
+            }
+        };
+        var game = new Phaser.Game(config);
+
+        function preload(){
+            this.load.spritesheet('object' , 'scr/games/Сапер/assets/gameObject.png' , {frameWidth: 56 , frameHeight : 56 });
+        }
+        function create(){
+            this.add.image(640 , 1136 ,'object');
+        }
+        function update(){
+
+        }
+    </script>
+</body>
+</html>
