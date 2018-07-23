@@ -33,11 +33,7 @@
             this.load.image('open' , 'scr/games/Сапер/assets/open.png' , {frameWidth: 56 , frameHeight : 56 });
         }
         function create(){
-            for ( var i = 0 ; i < 10 ; i++){
-                for( var j = 0 ; j < 19 ; j++){
-                    this.load.image(i * 56 , j * 56 , i);
-                }
-            }
+            this.add.image(0 , 0 , '1');
         }
         function update(){
 
