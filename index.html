@@ -1,40 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Page Title</title>
-    <script src="dist/phaser.min.js"></script>
+    <title>Пин-понг</title>
+    <script src="js.js" defer></script>
 </head>
 <body>
-    <script>
-        var config = {
-            type : Phaser.AUTO , 
-            width : 800 , 
-            height : 600 , 
-            physics : {
-                default : 'arcade' ,
-                arcade : {
-                    gravity : { x : 50} , 
-                    debug : false 
-                }
-            },
-            scene : {
-                preload : preload , 
-                create : create ,
-                update : update
-            }
-        };
-        var game = new Phaser.Game(config);
-
-        function preload(){
-            this.load.image('ground' , 'src/games/firstRPG/assets/ground.png');
-        }
-        function create(){
-            this.add.image(400 , 300 , 'ground');
-        }
-        function update(){
-
-        }
-    </script>
+    <canvas id="game" width="320" height="480"></canvas>
+    <input type="button" value="Влево" onclick="playerMoveLeft();" style='position: absolute ; left : 110px ; top : 500px'>
+    <input type="button" value="Вправо" onclick="playerMoveRigth()" style='position: absolute ; left : 170px ; top : 500px'>
+    <div id="text"></div>
 </body>
 </html>
