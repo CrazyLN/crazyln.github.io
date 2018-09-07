@@ -87,7 +87,7 @@ function playerMoveRigth(){
 }
 function aiMove(){
     var x ;
-    var vX = Math.abs(ball.vX) - 0.8 ;
+    var vX = Math.abs(ball.vX) - 2 ;
     if(ball.x < ai.x + ai.width / 2){
         x = ai.x - vX;
     } else {
